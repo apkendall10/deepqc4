@@ -1,15 +1,18 @@
-import agent4 as a4, gameControls4 as gc, time, numpy as np, pandas as pd
-from matplotlib import pyplot as plt 
+import agent as a4, gameControls as gc, time, numpy as np, pandas as pd, sys
 
 fpath1 = 'a1'
 fpath2 = 'a2'
+
+rounds = 1
+if len(sys.argv) > 1:
+    rounds = int(sys.argv[1])
 
 start_time = time.time()
 
 mya = a4.agent(fpath=None, debug=False, lr=.01, full_layer = False, use_target = False)
 mya2 = a4.agent(fpath=None, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
 
-for j in range(10):
+for j in range(round):
     print('round', j)
     score = []
     loss1 = []
@@ -20,7 +23,7 @@ for j in range(10):
     #mya2 = a4.agent(fpath=None, debug=False, lr=.01, advanced_memory = True, use_target = True, cnn = True)
 
     for i in range(100):
-        p1Wins, p2Wins, ties, l1, l2, pCount = gc.pick_winner(mya,mya2, season = True, rounds = 100)
+        p1Wins, p2Wins, ties, l1, l2, pCount = gc.pick_winner(mya,mya2, season = True, rounds = 50)
         val = [p1Wins, p2Wins, ties]
         loss1.append(l1)
         loss2.append(l2)

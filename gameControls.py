@@ -1,4 +1,4 @@
-import pandas as pd, numpy as np, math, random, time, agent4 as a4, board4
+import pandas as pd, numpy as np, math, random, time, agent as a4, board
 from itertools import permutations 
 
 #Game Type
