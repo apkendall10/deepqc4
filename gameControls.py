@@ -1,4 +1,4 @@
-import pandas as pd, numpy as np, math, random, time, agent as a4, board
+import pandas as pd, numpy as np, math, random, time, agent as a4, board as br
 from itertools import permutations 
 
 #Game Type
@@ -6,7 +6,7 @@ from itertools import permutations
 #1: agent vs. random
 #2: agent vs. player
 def play_game(game_type, agent1, agent2 = None, gamma = .95, debug = False):
-    board = board4.board()
+    board = br.board()
     start_player = random.randrange(-1,2,2)
     player = start_player
     move_choice = -1
