@@ -12,7 +12,7 @@ start_time = time.time()
 mya = a4.agent(fpath=None, debug=False, lr=.01, full_layer = False, use_target = False)
 mya2 = a4.agent(fpath=None, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
 
-for j in range(round):
+for j in range(rounds):
     print('round', j)
     score = []
     loss1 = []

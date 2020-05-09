@@ -218,7 +218,7 @@ class agent:
     def initialize(self, full_layer = True, cnn = True):
         model = Sequential()
         if cnn:
-            n_filters = 32 if full_layer else 16
+            n_filters = 32 #if full_layer else 16
             first_layer_stride = (1,1) if full_layer else (2,2)
             model.add(Conv2D(filters= n_filters, kernel_size = (2,2), strides = first_layer_stride, input_shape=(6,7,1), activation='relu'))
             model.add(Conv2D(filters= n_filters * 2, kernel_size = (2,2), strides = (1,1), activation='relu'))
