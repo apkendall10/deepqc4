@@ -209,11 +209,12 @@ class agent:
         return (wins, losses, rounds - wins - losses)
 
     def update_target(self, tao):
-        predict_weights = self.NN.weights
-        target_weights = self.target.weights
+        predict_weights = self.NN.get_weights()
+        target_weights = self.target.get_weights()
         for i in range(len(target_weights)):
             target_weights[i] = predict_weights[i] * tao + target_weights[i] * (1-tao)
         self.target.set_weights(target_weights)
+
     #initialize a network of weights
     def initialize(self, full_layer = True, cnn = True):
         model = Sequential()
