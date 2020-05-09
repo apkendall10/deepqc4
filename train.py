@@ -55,7 +55,7 @@ for j in range(round):
 
     data = np.array([y1,y2,z1,z2, playCount])
     df = pd.DataFrame(data.T, columns= ['A1 Wins', 'A2 Wins', 'A1 Loss', 'A2 Loss', 'Play Count'])
-    fnam = 'data/memory_lr_opp3/test{}.txt'.format(j+1)
+    fnam = 'data/train1/test{}.txt'.format(j+1)
     df.to_csv(fnam, index = False)
 
 mya.save_agent(fpath1)

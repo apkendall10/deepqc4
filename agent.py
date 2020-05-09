@@ -1,4 +1,4 @@
-import numpy as np, math, random, os, gameControls4 as gc, math
+import numpy as np, math, random, os, gameControls as gc, math
 from joblib import load, dump
 from keras.models import Sequential
 from keras.layers import Dense, Flatten, Conv2D
