@@ -9,8 +9,8 @@ if len(sys.argv) > 1:
 
 start_time = time.time()
 
-mya = a4.agent(fpath=None, debug=False, lr=.01, full_layer = False, use_target = False)
-mya2 = a4.agent(fpath=None, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
+mya = a4.agent(fpath=fpath1, debug=False, lr=.01, full_layer = False, use_target = False)
+mya2 = a4.agent(fpath=fpath2, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
 
 for j in range(rounds):
     print('round', j)
