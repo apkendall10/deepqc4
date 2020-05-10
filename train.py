@@ -22,7 +22,7 @@ for j in range(rounds):
     #mya = a4.agent(fpath=None, debug=False, lr=.01, advanced_memory = False, use_target = True)
     #mya2 = a4.agent(fpath=None, debug=False, lr=.01, advanced_memory = True, use_target = True, cnn = True)
 
-    for i in range(100):
+    for i in range(50):
         p1Wins, p2Wins, ties, l1, l2, pCount = gc.pick_winner(mya,mya2, season = True, rounds = 50)
         val = [p1Wins, p2Wins, ties]
         loss1.append(l1)
@@ -58,5 +58,5 @@ for j in range(rounds):
     fnam = 'data/train2/test{}.txt'.format(j+1)
     #df.to_csv(fnam, index = False)
 
-mya.save_agent(fpath1)
-mya2.save_agent(fpath2)
+    mya.save_agent(fpath1)
+    mya2.save_agent(fpath2)
