@@ -12,17 +12,18 @@ start_time = time.time()
 path = 'data/train'
 error = True
 fileNum = 0
-while error:
+while error and fileNum < 5000:
     fileNum += 1
     try:
-        os.mkdir(path = path + str(fileNum))
+        os.mkdir(path + str(fileNum))
         error = False
         print('Writing to ' + path + str(fileNum))
     except:
         pass
 
-mya = a4.agent(fpath=None, debug=False, lr=.01, full_layer = False, use_target = False)
-mya2 = a4.agent(fpath=None, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
+
+mya = a4.agent(fpath=fpath1, debug=False, lr=.01, full_layer = False, use_target = False)
+mya2 = a4.agent(fpath=fpath2, debug=False, lr=.01, use_target = False, advanced_memory = True, full_layer = False)
 
 for j in range(rounds):
     print('round', j)
